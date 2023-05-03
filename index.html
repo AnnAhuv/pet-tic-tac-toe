@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pet Tic Tac Toe</title>
+    <style>
+      body {
+        background-color: aquamarine;
+      }
+      h1 {
+        text-align: center;
+        color: rgb(5, 56, 73);
+      }
+      table {
+        table-layout: fixed;
+        border-collapse: collapse;
+        margin-inline: auto;
+      }
+      td {
+        border: 3px solid rgb(7, 0, 7);
+        width: 80px;
+        height: 80px;
+      }
+      .dog {
+        background-image: url(https://placedog.net/170);
+        background-size: cover;
+      }
+      .cat {
+        background-image: url(http://placekitten.com/160/160);
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Pet Tic Tac Toe</h1>
+    <table>
+      <tbody>
+        <tr>
+          <td class="cat"></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="dog"></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+  <script>
+    const cells = [...document.querySelectorAll("td")];
+    cells.forEach((cell) =>
+      cell.addEventListener("click", (ev) => cell.classList.add("cat"))
+    );
+  </script>
+</html>
